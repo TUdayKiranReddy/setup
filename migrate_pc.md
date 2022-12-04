@@ -11,6 +11,9 @@ NEW_PC: ``sudo apt update && cat pkglist | xargs sudo apt install -y`` and ``sud
 3. Copy ``/etc/apt/sources.list``, ``.bashrc``, ``.vimrc``, ``~/.ssh/``, ``mount_perceptron.sh``, ``dgx_host.sh`` to NEW_PC
 4. Migrate conda
 
-OLD_PC: ``conda list --export > package-list.txt`` 
+OLD_PC: ``python3 conda_exporter.py`` 
 
-NEW_PC: ``conda create -n myenv --file package-list.txt``
+NEW_PC: ``python3 conda_deporter.py``
+
+5. Download source code pro fonts
+``./source_pro_init.sh``
