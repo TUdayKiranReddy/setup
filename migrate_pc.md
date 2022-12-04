@@ -11,7 +11,7 @@ NEW_PC: ``sudo apt update && cat pkglist | xargs sudo apt install -y`` and ``sud
 3. Copy ``/etc/apt/sources.list``, ``.bashrc``, ``.vimrc``, ``~/.ssh/``, ``mount_perceptron.sh``, ``dgx_host.sh`` to NEW_PC
 4. Migrate conda
 
-OLD_PC: ``python3 conda_exporter.py`` 
+OLD_PC: ``python3 conda_exporter.py``  and copy folder ``conda_backup``
 
 NEW_PC: ``python3 conda_deporter.py``
 
