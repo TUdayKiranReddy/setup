@@ -8,4 +8,9 @@ and copy ``pkglist`` to NEW_PC
 
 NEW_PC: ``sudo apt update && cat pkglist | xargs sudo apt install -y`` and ``sudo apt autoremove``
 
-3. Copy ``/etc/apt/sources.list``, ``.bashrc``, ``.vimrc``, ``~/.ssh/``, ``mount_perceptron.sh``, ``dgx_host.sh``
+3. Copy ``/etc/apt/sources.list``, ``.bashrc``, ``.vimrc``, ``~/.ssh/``, ``mount_perceptron.sh``, ``dgx_host.sh`` to NEW_PC
+4. Migrate conda
+
+OLD_PC: ``conda list --export > package-list.txt`` 
+
+NEW_PC: ``conda create -n myenv --file package-list.txt``
